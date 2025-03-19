@@ -48,6 +48,7 @@ pub enum ButtonSize {
     Small,
     ExtraSmall,
     Large,
+    ExtraLarge,
     Medium,
 }
 
@@ -59,6 +60,7 @@ impl Display for ButtonSize {
             ButtonSize::Small => write!(f, "btn-sm"),
             ButtonSize::Medium => write!(f, "btn-md"),
             ButtonSize::Large => write!(f, "btn-lg"),
+            ButtonSize::ExtraLarge => write!(f, "btn-xl"),
         }
     }
 }
