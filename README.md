@@ -2,19 +2,24 @@
 
 This is a [Dioxus](https://dioxuslabs.com/) version of the [Daisy UI](https://daisyui.com/) components.
 
-## To Create a Release
+## Installation
+1. Add to Cargo.toml:
 
-To create a new release, use the following command locally:
-
-```sh
-cargo release patch
+```
+[dependencies]
+daisy_rsx = { git = "https://github.com/tsr8/daisy-rsx.git", branch = "daisy-5.0.6" }
+...
 ```
 
-Once you are ready, pass the `--execute` flag.
+2. Create input.css in main directory:
 
-This will:
+```
+@import "tailwindcss";
+@plugin "daisyui";
+```
 
-- Bump the version number.
-- Create a git tag.
-- Push changes to the remote repository.
-- Trigger the GitHub Actions workflow to publish the crate.
+3. Run in terminal:
+
+```sh
+npx @tailwindcss/cli -i ./input.css -o ./assets/tailwind.css --watch
+```
