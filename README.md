@@ -17,8 +17,20 @@ daisy_rsx = { git = "https://github.com/tsr8/daisy-rsx.git", branch = "daisy-5.0
 @import "tailwindcss";
 @plugin "daisyui";
 ```
+3. Install TailwindCSS:
 
-3. Run in terminal:
+```sh
+npm install tailwindcss
+```
+
+4. Install DaisyUI:
+
+```sh
+npm install daisyui
+
+```
+
+5. Run in terminal:
 
 ```sh
 npx @tailwindcss/cli -i ./input.css -o ./assets/tailwind.css --watch
